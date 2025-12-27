@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
+import { Smartphone, Code2, Server, Database, Zap, Cloud } from "lucide-react";
 
 const skills = [
-  { name: "React Native", level: 95 },
-  { name: "TypeScript", level: 90 },
-  { name: "React", level: 92 },
-  { name: "Node.js", level: 80 },
-  { name: "GraphQL", level: 75 },
-  { name: "Firebase", level: 85 },
+  { name: "React Native", icon: Smartphone, description: "Cross-platform mobile apps" },
+  { name: "TypeScript", icon: Code2, description: "Type-safe development" },
+  { name: "React", icon: Zap, description: "Modern web interfaces" },
+  { name: "Node.js", icon: Server, description: "Backend & APIs" },
+  { name: "GraphQL", icon: Database, description: "Flexible data queries" },
+  { name: "Firebase", icon: Cloud, description: "Cloud infrastructure" },
 ];
 
 const tools = [
@@ -93,31 +94,29 @@ export function About() {
               <h3 className="text-2xl font-semibold mb-6 text-foreground">
                 Core Skills
               </h3>
-              <div className="space-y-4">
+              <div className="grid grid-cols-2 gap-3">
                 {skills.map((skill, index) => (
                   <motion.div
                     key={skill.name}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    className="group p-4 rounded-xl bg-secondary/50 border border-border/50 hover:border-primary/50 hover:bg-secondary/80 transition-all duration-300"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1, duration: 0.4 }}
+                    whileHover={{ scale: 1.02 }}
                   >
-                    <div className="flex justify-between mb-2">
-                      <span className="text-sm font-medium text-foreground">
-                        {skill.name}
-                      </span>
-                      <span className="text-xs text-muted-foreground font-mono">
-                        {skill.level}%
-                      </span>
-                    </div>
-                    <div className="h-2 bg-secondary rounded-full overflow-hidden">
-                      <motion.div
-                        className="h-full bg-gradient-to-r from-primary to-accent rounded-full"
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3 + index * 0.1, duration: 0.8, ease: "easeOut" }}
-                      />
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
+                        <skill.icon className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-foreground text-sm">
+                          {skill.name}
+                        </h4>
+                        <p className="text-xs text-muted-foreground mt-0.5">
+                          {skill.description}
+                        </p>
+                      </div>
                     </div>
                   </motion.div>
                 ))}
