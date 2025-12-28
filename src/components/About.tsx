@@ -61,7 +61,7 @@ export function About() {
               </h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  I started my journey in mobile development 6 years ago, driven by
+                  I started my journey in software engineering 6 years ago. More recently, I've been driven by
                   the desire to build products that people carry in their pockets
                   every day. There's something magical about creating experiences
                   that become part of someone's daily routine.

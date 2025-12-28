@@ -19,7 +19,7 @@ export function Footer() {
               Let's build something together
             </p>
             <p className="text-sm text-muted-foreground">
-              © {currentYear} Your Name. All rights reserved.
+              © {currentYear} FC Obocha. All rights reserved.
             </p>
           </div>
 

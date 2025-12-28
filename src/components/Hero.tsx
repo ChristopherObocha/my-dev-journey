@@ -47,7 +47,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           <span className="block text-foreground">Hi, I'm</span>
-          <span className="text-gradient">Your Name</span>
+          <span className="text-gradient">Christopher</span>
         </motion.h1>
 
         <motion.p
@@ -56,7 +56,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          React Native Developer
+          Software Engineer | Mobile App Enthusiast
         </motion.p>
 
         <motion.p
@@ -65,7 +65,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          Building beautiful, performant mobile experiences for 6+ years.
+          Building beautiful, performant app experiences for 6+ years.
           <br />
           Turning ideas into polished apps that users love.
         </motion.p>
